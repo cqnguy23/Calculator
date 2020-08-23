@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXm-et-nUh">
-                                <rect key="frame" x="0.0" y="44" width="375" height="436"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="480"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfd-n3-PKG">
-                                        <rect key="frame" x="347" y="218" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="347" y="240" width="0.0" height="0.0"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -282,7 +282,7 @@
                             <constraint firstItem="rCW-a9-uBI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cNa-lx-Nxd"/>
                             <constraint firstItem="zXm-et-nUh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hAe-q2-nTN"/>
                             <constraint firstItem="zXm-et-nUh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ouG-hb-DsB"/>
-                            <constraint firstItem="zXm-et-nUh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pao-f7-2jk"/>
+                            <constraint firstItem="zXm-et-nUh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rVi-ei-Ra1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
