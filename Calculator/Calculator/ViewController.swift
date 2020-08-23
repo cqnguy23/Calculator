@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     var numDigit: Int = 0
     var operation: String = ""
     var previousTag: String = ""
-
+    var calPressed: Bool = false
     var isFirstNum: Bool = true
     var operationPerformed: Bool = false
     @IBAction func buttons(_ sender: UIButton) {
@@ -33,6 +33,7 @@ class ViewController: UIViewController {
                 if operationPerformed {
                     return
                 }
+                calPressed = false
                 operation = textLabel
                 isFirstNum = false
                 operationPerformed = true
@@ -43,14 +44,18 @@ class ViewController: UIViewController {
                     return
                         
                 }
-                isFirstNum = true
                 operationPerformed = false
                 let result = calculate()
                 
                 displayNum.text = String(result)
                 break
             default:
-                if isFirstNum {
+                if calPressed {
+                    reset()
+                    firstNumberStr += textLabel
+                    displayNum.text = firstNumberStr
+                }
+                else if isFirstNum {
                     if displayNum.text == "0" {
                         displayNum.text = ""
                     }
@@ -86,6 +91,7 @@ class ViewController: UIViewController {
         }
         
         firstNumberStr = "\(result)";
+        calPressed = true;
         return result;
     }
     
@@ -100,12 +106,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clear(_ sender: UIButton) {
+        reset()
+    }
+    
+    func reset() {
         firstNumberStr = ""
         secondNumberStr = ""
         operation = ""
         displayNum.text = "0"
         operationPerformed = false
         isFirstNum = true
+        calPressed = false
     }
     
     override func viewDidLoad() {
