@@ -59,6 +59,10 @@ class ViewController: UIViewController {
                     if displayNum.text == "0" {
                         displayNum.text = ""
                     }
+                    if textLabel == "0" {
+                        displayNum.text = "0"
+                        break;
+                    }
                     firstNumberStr += textLabel
                     displayNum.text = firstNumberStr
                 }
